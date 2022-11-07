@@ -16,6 +16,11 @@ describe('EditarProductoComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+  beforeEach(() => {
+    fixture = TestBed.createComponent(EditarProductoComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();
