@@ -13,7 +13,7 @@ describe('BuscarProductoComponent', () => {
     .compileComponents();
   });
 
-  beforeEach(async () => {
+  beforeEach(() => {
     fixture = TestBed.createComponent(BuscarProductoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

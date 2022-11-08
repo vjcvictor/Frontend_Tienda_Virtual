@@ -8,7 +8,7 @@ import { SeguridadService } from './seguridad.service';
   providedIn: 'root'
 })
 export class ProductoService {
-  url='http://localhost:3000';
+  url=  'http://localhost:3000';
   token: String = '';
 
   constructor(private http: HttpClient,private seguridadServicio: SeguridadService) { 
@@ -24,16 +24,16 @@ export class ProductoService {
   }
 
   CrearProducto(producto : ModeloProducto): Observable<ModeloProducto>{
-    return this.http.post<ModeloProducto>(`${this.url}/productos/${producto.id}`, producto,{
+    return this.http.post<ModeloProducto>(`${this.url}/productos`, producto,{
       headers: new HttpHeaders({
-       'Authorizacion': `Bearer ${this.token}`
+       'Authorization': `Bearer ${this.token}`
       })
     })
   }
   ActualizarProducto(producto : ModeloProducto): Observable<ModeloProducto>{
-    return this.http.put<ModeloProducto>(`${this.url}/productos`, producto,{
+    return this.http.put<ModeloProducto>(`${this.url}/productos/${producto.id}`, producto,{
       headers: new HttpHeaders({
-       'Authorizacion': ` Bearer ${this.token}`
+       'Authorization': ` Bearer ${this.token}`
       })
     })
   }

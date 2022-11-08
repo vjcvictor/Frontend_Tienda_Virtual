@@ -8,16 +8,16 @@ import { ProductoService } from 'src/app/servicios/producto.service';
   styleUrls: ['./buscar-producto.component.css']
 })
 export class BuscarProductoComponent implements OnInit {
- listadoRegistros: ModeloProducto[]= [];
+  listadoRegistros: ModeloProducto[] = [];
   constructor(private productoServicio: ProductoService) { }
 
   ngOnInit(): void {
     this.ObtenerListadoProductos();
   }
-  ObtenerListadoProductos(){
-   this .productoServicio.ObtenerRegistros().subscribe((datos: ModeloProducto[]) =>{
-    this.listadoRegistros = datos;
-   })
+  ObtenerListadoProductos() {
+    this.productoServicio.ObtenerRegistros().subscribe((datos: ModeloProducto[]) => {
+      this.listadoRegistros = datos;
+    })
   }
 
 }
