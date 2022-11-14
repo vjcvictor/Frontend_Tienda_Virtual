@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModeloPedido } from 'src/app/modelos/pedido.modelo';
+import { PedidoService } from 'src/app/servicios/pedido.service';
 
 @Component({
   selector: 'app-buscar-pedido',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuscarPedidoComponent implements OnInit {
 
-  constructor() { }
+
+listadoPedidos : ModeloPedido[]= [];
+
+  constructor(private pedidoService : PedidoService) { }
 
   ngOnInit(): void {
+    this.ObtenerListadoPedido();
+  }
+  ObtenerListadoPedido(){
+    this.pedidoService.ObtenerPedidos().subscribe((datos: ModeloPedido[])=>{
+      this.listadoPedidos= datos;
+    })
   }
 
 }

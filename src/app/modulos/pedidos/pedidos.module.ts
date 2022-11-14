@@ -7,6 +7,7 @@ import { CrearPedidoComponent } from './crear-pedido/crear-pedido.component';
 import { EditarPedidoComponent } from './editar-pedido/editar-pedido.component';
 import { EliminarPedidoComponent } from './eliminar-pedido/eliminar-pedido.component';
 import { BuscarPedidoComponent } from './buscar-pedido/buscar-pedido.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,9 @@ import { BuscarPedidoComponent } from './buscar-pedido/buscar-pedido.component';
   ],
   imports: [
     CommonModule,
-    PedidosRoutingModule
+    PedidosRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class PedidosModule { }
