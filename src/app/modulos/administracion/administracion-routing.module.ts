@@ -33,7 +33,13 @@ const routes: Routes = [
     path: 'editar-producto/:id',
     component: EditarProductoComponent,
     canActivate: [ValidadorSesionGuard]
+  },
+  {
+    path: 'eliminar-producto/:id',
+    component: EditarProductoComponent,
+    canActivate: [ValidadorSesionGuard]
   }
+
 ];
 
 @NgModule({

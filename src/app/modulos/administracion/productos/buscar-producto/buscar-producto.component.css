@@ -1,3 +1,10 @@
 .imagenProducto{
     width: 100px;
 }
+ .btn{
+    width: 250px;
+    width: 250px;
+    size-adjust: 10px;
+    color: rgb(219, 20, 20);
+   background-color: rgb(69, 14, 121);
+ }

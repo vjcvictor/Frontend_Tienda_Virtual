@@ -6,6 +6,7 @@
         <li *ngIf="seInicioSesion"><a routerLink="/administracion/usuarios">Usuarios</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-productos">Productos</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="/administracion/register-usuario">register</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="/pedidos/buscar-pedido">Pedidos</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambioClave">Cambiar Clave</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar Sesión</a></li>
         <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Iniciar Sesión</a></li>
@@ -14,11 +15,13 @@
   </nav>
 
   <ul class="sidenav" id="mobile-demo">
-        <li *ngIf="seInicioSesion"><a routerLink="/administracion/usuarios">Usuarios</a></li>
-        <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-productos">Productos</a></li>
-        <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambioClave">Cambiar Clave</a></li>
-        <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar Sesión</a></li>
-        <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Iniciar Sesión</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/usuarios">Usuarios</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-productos">Productos</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/register-usuario">register</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/pedidos/buscar-pedido">Pedidos</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambioClave">Cambiar Clave</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar Sesión</a></li>
+    <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Iniciar Sesión</a></li>
   </ul>
   
         
