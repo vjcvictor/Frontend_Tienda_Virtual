@@ -1,10 +1,10 @@
 export  class ModeloPedido{
   id?: string;
   cantidad?: number;
- fechaPedido?: string;
- fechaEntrega?: string;
+ fechaPedido?: Date;
+ fechaEntrega?: Date;
  formasPago?: string;
  total?: number;
-  estado?: number;
+  estado?: string;
 }
 
