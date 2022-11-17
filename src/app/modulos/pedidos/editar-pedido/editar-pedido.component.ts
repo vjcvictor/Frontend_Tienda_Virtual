@@ -46,12 +46,12 @@ export class EditarPedidoComponent implements OnInit {
     let fechaPedido = this.fgValidador.controls["fechaPedido"].value;
     let fechaEntrega = this.fgValidador.controls["fechaEntrega"].value;
     let formasPago = this.fgValidador.controls["formasPago"].value;
-    let estado = parseInt(this.fgValidador.controls["estado"].value);
+    let estado = this.fgValidador.controls["estado"].value;
     let total = parseInt(this.fgValidador.controls["total"].value);
     let p = new ModeloPedido();
     p.cantidad = cantidad;
-    p.fechaPedido= fechaPedido;
-    p.fechaEntrega = fechaEntrega;
+    p.fechaPedido= new Date(fechaPedido);
+    p.fechaEntrega = new Date(fechaEntrega);
     p.formasPago= formasPago;
     p.estado= estado;
     p.total = total;
